@@ -45,7 +45,14 @@ class UsersController extends Controller
      */
     public function create()
     {
-        //
+        $data = [
+            'name' => 'Faria',
+            'address' => 'Mohakhali',
+            'age' => 99
+        ];
+        User::create($data);
+        $allusers = User::all();
+        dd($allusers);
     }
 
     /**
